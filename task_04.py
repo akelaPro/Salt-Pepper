@@ -1,6 +1,6 @@
 def sort_list(collection):
     if not collection:
-        return
+        return []
     min_item = min(collection)
     max_item = max(collection)
     for i in range(len(collection)):
@@ -9,3 +9,4 @@ def sort_list(collection):
         elif collection[i] == max_item:
             collection[i] = min_item
     collection.append(min_item)
+

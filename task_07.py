@@ -7,3 +7,4 @@ def combine_anagrams(words_array):
         else:
             result[sort_word].append(word)
     return list(result.values())
+
