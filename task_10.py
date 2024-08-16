@@ -9,4 +9,3 @@ def count_words(text=None):
         if word:
             word_count[word] = word_count.get(word, 0) + 1
     return word_count
-print(count_words())
