@@ -9,4 +9,6 @@ def sort_list(collection):
         elif collection[i] == max_item:
             collection[i] = min_item
     collection.append(min_item)
+    return collection
+
 

@@ -30,4 +30,5 @@ def rps_game_winner(args):
         return to_str(player_2, hand_2)
     
 def to_str(arg1, arg2):
-    return f"'{arg1} {arg2}'"
+    return f"{arg1} {arg2}"
+print(rps_game_winner([['player1', 'P'], ['player2', 'P']]))
