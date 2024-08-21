@@ -1,10 +1,7 @@
 class Dessert:
     def __init__(self, name=None, calories=0):
         self._name = name
-        if isinstance(calories, int):
-            self._calories = calories
-        else:
-            self._calories = 0
+        self._calories = self.validate(calories)
 
     @property
     def name(self):
@@ -20,10 +17,16 @@ class Dessert:
 
     @calories.setter
     def calories(self, value):
-        if isinstance(value, int):
-            self._calories = value
+        self._calories = self.validate(value)
+
+    @staticmethod
+    def validate(value):
+        if isinstance(value, str) and value.isdigit():
+            return int(value)
+        elif isinstance(value, int):
+            return value
         else:
-            self._calories = 0
+            raise ValueError()
 
     def is_healthy(self):
         return self._calories < 200
