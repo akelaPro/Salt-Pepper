@@ -32,18 +32,18 @@ class Dessert:
 
 
 class JellyBean(Dessert):
-    def __init__(self, favor=None, name=None, calories=0):
+    def __init__(self, flavor=None, name=None, calories=0):
         super().__init__(name, calories)
-        self._favor = favor
+        self._flavor = flavor
 
     @property
-    def favor(self):
-        return self._favor
+    def flavor(self):
+        return self._flavor
 
-    @favor.setter
-    def favor(self, value):
-        self._favor = value
+    @flavor.setter
+    def flavor(self, value):
+        self._flavor = value
 
     def is_delicious(self):
-        return False if self._favor == 'black licorice' else super().is_delicious()
+        return False if self._flavor == 'black licorice' else super().is_delicious()
     
